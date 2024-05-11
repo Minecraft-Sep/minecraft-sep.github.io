@@ -1,0 +1,307 @@
+提示
+
+{% tip %}default{% endtip %}
+{% tip info %}info{% endtip %}
+{% tip success %}success{% endtip %}
+{% tip error %}error{% endtip %}
+{% tip warning %}warning{% endtip %}
+{% tip bolt %}bolt{% endtip %}
+{% tip ban %}ban{% endtip %}
+{% tip home %}home{% endtip %}
+{% tip sync %}sync{% endtip %}
+{% tip cogs %}cogs{% endtip %}
+{% tip key %}key{% endtip %}
+{% tip bell %}bell{% endtip %}
+{% tip fa-atom %}自定义 font awesome 图标{% endtip %}.
+
+Note
+
+#1
+
+{% note simple %}默认 提示块标签{% endnote %}
+{% note default simple %}default 提示块标签{% endnote %}
+{% note primary simple %}primary 提示块标签{% endnote %}
+{% note success simple %}success 提示块标签{% endnote %}
+{% note info simple %}info 提示块标签{% endnote %}
+{% note warning simple %}warning 提示块标签{% endnote %}
+{% note danger simple %}danger 提示块标签{% endnote %}
+
+#2
+
+{% note modern %}默认 提示块标签{% endnote %}
+{% note default modern %}default 提示块标签{% endnote %}
+{% note primary modern %}primary 提示块标签{% endnote %}
+{% note success modern %}success 提示块标签{% endnote %}
+{% note info modern %}info 提示块标签{% endnote %}
+{% note warning modern %}warning 提示块标签{% endnote %}
+{% note danger modern %}danger 提示块标签{% endnote %}
+
+
+复选列表 checkbox
+
+{% checkbox 纯文本测试 %}
+{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
+{% checkbox red, 支持自定义颜色 %}
+{% checkbox green checked, 绿色 + 默认选中 %}
+{% checkbox yellow checked, 黄色 + 默认选中 %}
+{% checkbox cyan checked, 青色 + 默认选中 %}
+{% checkbox blue checked, 蓝色 + 默认选中 %}
+{% checkbox plus green checked, 增加 %}
+{% checkbox minus yellow checked, 减少 %}
+{% checkbox times red checked, 叉 %}
+
+单选
+
+{% radio 纯文本测试 %}
+{% radio checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
+{% radio red, 支持自定义颜色 %}
+{% radio green, 绿色 %}
+{% radio yellow, 黄色 %}
+{% radio cyan, 青色 %}
+{% radio blue, 蓝色 %}
+
+link
+
+{% link 获取网站的Favicon图标并显示在你的网页上,owen0o0,https://github.com/owen0o0/getFavicon %}
+
+Gallery 相册图库
+
+<div class="gallery-group-main">
+ {% galleryGroup MC 在Rikkaの六花服务器里留下的足迹 '/wordScenery/' https://bu.dusays.com/2023/06/01/64788f24d05bd.webp %}
+ {% galleryGroup Gundam 哦咧哇gundam哒！ '/thousand/' https://bu.dusays.com/2023/06/01/64788f456fc3d.webp %}
+ {% galleryGroup I-am-Akilar 某种意义上也算自拍吧 '/wallpaper/' https://bu.dusays.com/2023/06/01/64788f83e5fa1.webp %}
+</div>
+
+
+折叠框 folding
+
+{% folding 查看图片测试 %}
+
+![](https://bu.dusays.com/2023/06/01/64788d71c832d.webp)
+
+{% endfolding %}
+
+{% folding cyan open, 查看默认打开的折叠框 %}
+
+这是一个默认打开的折叠框。
+
+{% endfolding %}
+
+{% folding green, 查看代码测试 %}
+假装这里有代码块（代码块没法嵌套代码块）
+{% endfolding %}
+
+{% folding yellow, 查看列表测试 %}
+
+- haha
+- hehe
+
+{% endfolding %}
+
+{% folding red, 查看嵌套测试 %}
+
+{% folding, 查看嵌套测试2 %}
+
+{% folding 查看嵌套测试3 %}
+
+hahaha <span><img src='https://bu.dusays.com/2023/06/01/64788cd5a356b.png' style='height:24px'></span>
+
+{% endfolding %}
+
+{% endfolding %}
+
+{% endfolding %}
+
+mermaid 图
+
+主题配置文件修改：
+
+
+# mermaid
+# see https://github.com/mermaid-js/mermaid
+mermaid:
+  enable: true
+  # built-in themes: default/forest/dark/neutral
+  theme:
+    light: default
+    dark: dark
+
+语法：
+
+{% mermaid %}
+pie
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+{% endmermaid %}
+
+link推荐
+
+
+{% flink %}
+- class_name: 推荐博客
+  flink_style: flexcard
+  link_list:
+    - name: 安知鱼
+      link: https://blog.anheyu.com/
+      avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg
+      descr: 生活明朗，万物可爱
+      siteshot: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.6/img/blog.anheyu.com.jpg
+
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  flink_style: anzhiyu
+  link_list:
+    - name: Youtube
+      link: https://www.youtube.com/
+      avatar: https://i.loli.net/2020/05/14/9ZkGg8v3azHJfM1.png
+      descr: 视频网站
+    - name: Weibo
+      link: https://www.weibo.com/
+      avatar: https://i.loli.net/2020/05/14/TLJBum386vcnI1P.png
+      descr: 中国最大社交分享平台
+    - name: Twitter
+      link: https://twitter.com/
+      avatar: https://i.loli.net/2020/05/14/5VyHPQqR6LWF39a.png
+      descr: 社交分享平台
+{% endflink %}
+
+timeline
+
+{% timeline 2022 %}
+<!-- timeline 01-02 -->
+
+这是测试页面
+<!-- endtimeline -->
+
+{% endtimeline %}
+
+sites卡片
+
+{% sitegroup %}
+{% site xaoxuu, url=https://xaoxuu.com, screenshot=https://bu.dusays.com/2023/06/01/6478965ce6557.webp, avatar=https://cdn1.tianli0.top/gh/xaoxuu/cdn-assets/avatar/avatar.png, description=简约风格 %}
+{% site Colsrch, url=https://colsrch.top, screenshot=https://i.loli.net/2020/08/22/dFRWXm52OVu8qfK.png, avatar=https://cdn1.tianli0.top/gh/Colsrch/images/Colsrch/avatar.jpg, description=这是一段关于这个网站的描述文字 %}
+{% site Linhk1606, url=https://linhk1606.github.io, screenshot=https://bu.dusays.com/2023/06/01/6478963584621.png, avatar=https://bu.dusays.com/2023/06/01/6478968743368.png, description=这是一段关于这个网站的描述文字 %}
+{% endsitegroup %}
+
+按钮
+
+一组按钮
+
+This is my website, click the button {% btn 'https://blog.anheyu.com/',AnZhiYu %}
+This is my website, click the button {% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right %}
+This is my website, click the button {% btn 'https://blog.anheyu.com/',AnZhiYu,,outline %}
+This is my website, click the button {% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline %}
+This is my website, click the button {% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,larger %}
+
+调整位置/大小
+
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,block %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,block center larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,block right outline larger %}
+more than one button in center
+<span>
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,blue larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,pink larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,red larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,purple larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,orange larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,green larger %}
+</span>
+
+居中按钮
+
+<div class="btn-center">
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline blue larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline pink larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline red larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline purple larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline orange larger %}
+{% btn 'https://blog.anheyu.com/',AnZhiYu,anzhiyufont anzhiyu-icon-circle-arrow-right,outline green larger %}
+</div>
+
+按钮 btns
+
+如果需要显示类似「团队成员」之类的一组含有头像的链接：
+
+{% btns circle grid5 %}
+{% cell xaoxuu, https://xaoxuu.com, https://bu.dusays.com/2023/06/01/64787e6a5816d.png %}
+{% cell xaoxuu, https://xaoxuu.com, https://bu.dusays.com/2023/06/01/64787e6a5816d.png %}
+{% cell xaoxuu, https://xaoxuu.com, https://bu.dusays.com/2023/06/01/64787e6a5816d.png %}
+{% cell xaoxuu, https://xaoxuu.com, https://bu.dusays.com/2023/06/01/64787e6a5816d.png %}
+{% cell xaoxuu, https://xaoxuu.com, https://bu.dusays.com/2023/06/01/64787e6a5816d.png %}
+{% endbtns %}
+
+或者含有图标的按钮：
+
+{% btns rounded grid5 %}
+{% cell 下载源码, /, anzhiyufont anzhiyu-icon-bolt %}
+{% cell 查看文档, /, anzhiyufont anzhiyu-icon-book %}
+{% endbtns %}
+
+圆形图标 + 标题 + 描述 + 图片 + 网格 5 列 + 居中
+
+{% btns circle center grid5 %}
+<a href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1' class="no-text-decoration">
+<i class='anzhiyufont anzhiyu-icon-heartbeat'></i>
+<b>心率管家</b>
+{% p red, 专业版 %}
+<img src='https://bu.dusays.com/2023/06/01/64787e2a1347c.png'>
+</a>
+<a href='https://apps.apple.com/cn/app/heart-mate-lite-hrm-utility/id1475747930?ls=1' class="no-text-decoration">
+<i class='anzhiyufont anzhiyu-icon-heartbeat'></i>
+<b>心率管家</b>
+{% p green, 免费版 %}
+<img src='https://bu.dusays.com/2023/06/01/64787e515e261.png'>
+</a>
+{% endbtns %}
+
+
+Tab分类
+
+{% tabs test4 %}
+
+<!-- tab 第一个Tab -->
+
+**tab 名字为第一个 Tab**
+
+<!-- endtab -->
+
+<!-- tab @fab fa-apple-pay -->
+
+**只有图标 没有 Tab 名字**
+
+<!-- endtab -->
+
+<!-- tab 炸弹@fas fa-bomb -->
+
+**名字+icon**
+
+<!-- endtab -->
+
+{% endtabs %}
+
+text标签
+
+1. 带 {% u 下划线 %} 的文本
+2. 带 {% emp 着重号 %} 的文本
+3. 带 {% wavy 波浪线 %} 的文本
+4. 带 {% del 删除线 %} 的文本
+5. 键盘样式的文本 {% kbd command %} + {% kbd D %}
+6. 密码样式的文本：{% psw 这里没有验证码 %}
+
+span
+
+- 彩色文字
+  在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。
+- 超大号文字
+  文档「开始」页面中的标题部分就是超大号文字。
+  {% span center logo large, Volantis %}
+  {% span center small, A Wonderful Theme for Hexo %}
+
+
+
